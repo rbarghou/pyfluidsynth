@@ -1,0 +1,16 @@
+CHANGELOG
+MANIFEST.in
+README.md
+setup.py
+pyFluidSynth2.egg-info/PKG-INFO
+pyFluidSynth2.egg-info/SOURCES.txt
+pyFluidSynth2.egg-info/dependency_links.txt
+pyFluidSynth2.egg-info/requires.txt
+pyFluidSynth2.egg-info/top_level.txt
+pyfluidsynth2/__init__.py
+pyfluidsynth2/driver.py
+pyfluidsynth2/lib.py
+pyfluidsynth2/player.py
+pyfluidsynth2/settings.py
+pyfluidsynth2/synth.py
+test/test_scales.py
