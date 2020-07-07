@@ -1,0 +1,110 @@
+,Unnamed: 0,c_method_name,c_argument_list_str,c_return_type
+0,0,new_fluid_synth,['fluid_settings_t *settings'],FLUIDSYNTH_API fluid_synth_t *
+1,1,delete_fluid_synth,['fluid_synth_t *synth'],FLUIDSYNTH_API void
+2,2,fluid_synth_get_settings,['fluid_synth_t *synth'],FLUIDSYNTH_API fluid_settings_t *
+3,3,fluid_synth_noteon,"['fluid_synth_t *synth', 'int chan', 'int key', 'int vel']",FLUIDSYNTH_API int
+4,4,fluid_synth_noteoff,"['fluid_synth_t *synth', 'int chan', 'int key']",FLUIDSYNTH_API int
+5,5,fluid_synth_cc,"['fluid_synth_t *synth', 'int chan', 'int ctrl', 'int val']",FLUIDSYNTH_API int
+6,6,fluid_synth_get_cc,"['fluid_synth_t *synth', 'int chan', 'int ctrl', 'int *pval']",FLUIDSYNTH_API int
+7,7,fluid_synth_sysex,"['fluid_synth_t *synth', 'const char *data', 'int len', 'char *response', 'int *response_len', 'int *handled', 'int dryrun']",FLUIDSYNTH_API int
+8,8,fluid_synth_pitch_bend,"['fluid_synth_t *synth', 'int chan', 'int val']",FLUIDSYNTH_API int
+9,9,fluid_synth_get_pitch_bend,"['fluid_synth_t *synth', 'int chan', 'int *ppitch_bend']",FLUIDSYNTH_API int
+10,10,fluid_synth_pitch_wheel_sens,"['fluid_synth_t *synth', 'int chan', 'int val']",FLUIDSYNTH_API int
+11,11,fluid_synth_get_pitch_wheel_sens,"['fluid_synth_t *synth', 'int chan', 'int *pval']",FLUIDSYNTH_API int
+12,12,fluid_synth_program_change,"['fluid_synth_t *synth', 'int chan', 'int program']",FLUIDSYNTH_API int
+13,13,fluid_synth_channel_pressure,"['fluid_synth_t *synth', 'int chan', 'int val']",FLUIDSYNTH_API int
+14,14,fluid_synth_key_pressure,"['fluid_synth_t *synth', 'int chan', 'int key', 'int val']",FLUIDSYNTH_API int
+15,15,fluid_synth_bank_select,"['fluid_synth_t *synth', 'int chan', 'int bank']",FLUIDSYNTH_API int
+16,16,fluid_synth_sfont_select,"['fluid_synth_t *synth', 'int chan', 'int sfont_id']",FLUIDSYNTH_API int
+17,17,fluid_synth_program_select,"['fluid_synth_t *synth', 'int chan', 'int sfont_id', 'int bank_num', 'int preset_num']",FLUIDSYNTH_API int
+18,18,fluid_synth_program_select_by_sfont_name,"['fluid_synth_t *synth', 'int chan', 'const char *sfont_name', 'int bank_num', 'int preset_num']",FLUIDSYNTH_API int
+19,19,fluid_synth_get_program,"['fluid_synth_t *synth', 'int chan', 'int *sfont_id', 'int *bank_num', 'int *preset_num']",FLUIDSYNTH_API int
+20,20,fluid_synth_unset_program,"['fluid_synth_t *synth', 'int chan']",FLUIDSYNTH_API int
+21,21,fluid_synth_program_reset,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+22,22,fluid_synth_system_reset,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+23,23,fluid_synth_all_notes_off,"['fluid_synth_t *synth', 'int chan']",FLUIDSYNTH_API int
+24,24,fluid_synth_all_sounds_off,"['fluid_synth_t *synth', 'int chan']",FLUIDSYNTH_API int
+25,25,fluid_synth_set_channel_type,"['fluid_synth_t *synth', 'int chan', 'int type']",FLUIDSYNTH_API int
+26,26,fluid_synth_get_channel_preset,"['fluid_synth_t *synth', 'int chan']",FLUIDSYNTH_API fluid_preset_t *
+27,27,fluid_synth_start,"['fluid_synth_t *synth', 'unsigned int id', 'fluid_preset_t *preset', 'int audio_chan', 'int midi_chan', 'int key', 'int vel']",FLUIDSYNTH_API int
+28,28,fluid_synth_stop,"['fluid_synth_t *synth', 'unsigned int id']",FLUIDSYNTH_API int
+29,29,fluid_synth_sfload,"['fluid_synth_t *synth', 'const char *filename', 'int reset_presets']",FLUIDSYNTH_API int
+30,30,fluid_synth_sfreload,"['fluid_synth_t *synth', 'int id']",FLUIDSYNTH_API int
+31,31,fluid_synth_sfunload,"['fluid_synth_t *synth', 'int id', 'int reset_presets']",FLUIDSYNTH_API int
+32,32,fluid_synth_add_sfont,"['fluid_synth_t *synth', 'fluid_sfont_t *sfont']",FLUIDSYNTH_API int
+33,33,fluid_synth_remove_sfont,"['fluid_synth_t *synth', 'fluid_sfont_t *sfont']",FLUIDSYNTH_API int
+34,34,fluid_synth_sfcount,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+35,35,fluid_synth_get_sfont,"['fluid_synth_t *synth', 'unsigned int num']",FLUIDSYNTH_API fluid_sfont_t *
+36,36,fluid_synth_get_sfont_by_id,"['fluid_synth_t *synth', 'int id']",FLUIDSYNTH_API fluid_sfont_t *
+37,37,fluid_synth_get_sfont_by_name,"['fluid_synth_t *synth', 'const char *name']",FLUIDSYNTH_API fluid_sfont_t *
+38,38,fluid_synth_set_bank_offset,"['fluid_synth_t *synth', 'int sfont_id', 'int offset']",FLUIDSYNTH_API int
+39,39,fluid_synth_get_bank_offset,"['fluid_synth_t *synth', 'int sfont_id']",FLUIDSYNTH_API int
+40,40,fluid_synth_set_reverb,"['fluid_synth_t *synth', 'double roomsize', 'double damping', 'double width', 'double level']",FLUIDSYNTH_API int
+41,41,fluid_synth_set_reverb_roomsize,"['fluid_synth_t *synth', 'double roomsize']",FLUIDSYNTH_API int
+42,42,fluid_synth_set_reverb_damp,"['fluid_synth_t *synth', 'double damping']",FLUIDSYNTH_API int
+43,43,fluid_synth_set_reverb_width,"['fluid_synth_t *synth', 'double width']",FLUIDSYNTH_API int
+44,44,fluid_synth_set_reverb_level,"['fluid_synth_t *synth', 'double level']",FLUIDSYNTH_API int
+45,45,fluid_synth_set_reverb_on,"['fluid_synth_t *synth', 'int on']",FLUIDSYNTH_API void
+46,46,fluid_synth_get_reverb_roomsize,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+47,47,fluid_synth_get_reverb_damp,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+48,48,fluid_synth_get_reverb_level,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+49,49,fluid_synth_get_reverb_width,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+50,50,fluid_synth_set_chorus,"['fluid_synth_t *synth', 'int nr', 'double level', 'double speed', 'double depth_ms', 'int type']",FLUIDSYNTH_API int
+51,51,fluid_synth_set_chorus_nr,"['fluid_synth_t *synth', 'int nr']",FLUIDSYNTH_API int
+52,52,fluid_synth_set_chorus_level,"['fluid_synth_t *synth', 'double level']",FLUIDSYNTH_API int
+53,53,fluid_synth_set_chorus_speed,"['fluid_synth_t *synth', 'double speed']",FLUIDSYNTH_API int
+54,54,fluid_synth_set_chorus_depth,"['fluid_synth_t *synth', 'double depth_ms']",FLUIDSYNTH_API int
+55,55,fluid_synth_set_chorus_type,"['fluid_synth_t *synth', 'int type']",FLUIDSYNTH_API int
+56,56,fluid_synth_set_chorus_on,"['fluid_synth_t *synth', 'int on']",FLUIDSYNTH_API void
+57,57,fluid_synth_get_chorus_nr,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+58,58,fluid_synth_get_chorus_level,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+59,59,fluid_synth_get_chorus_speed,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+60,60,fluid_synth_get_chorus_depth,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+61,61,fluid_synth_get_chorus_type,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+62,62,fluid_synth_count_midi_channels,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+63,63,fluid_synth_count_audio_channels,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+64,64,fluid_synth_count_audio_groups,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+65,65,fluid_synth_count_effects_channels,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+66,66,fluid_synth_count_effects_groups,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+67,67,fluid_synth_set_sample_rate,"['fluid_synth_t *synth', 'float sample_rate']",FLUID_DEPRECATED FLUIDSYNTH_API void
+68,68,fluid_synth_set_gain,"['fluid_synth_t *synth', 'float gain']",FLUIDSYNTH_API void
+69,69,fluid_synth_get_gain,['fluid_synth_t *synth'],FLUIDSYNTH_API float
+70,70,fluid_synth_set_polyphony,"['fluid_synth_t *synth', 'int polyphony']",FLUIDSYNTH_API int
+71,71,fluid_synth_get_polyphony,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+72,72,fluid_synth_get_active_voice_count,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+73,73,fluid_synth_get_internal_bufsize,['fluid_synth_t *synth'],FLUIDSYNTH_API int
+74,74,fluid_synth_set_interp_method,"['fluid_synth_t *synth', 'int chan', 'int interp_method']",FLUIDSYNTH_API int
+75,75,fluid_synth_set_gen,"['fluid_synth_t *synth', 'int chan', 'int param', 'float value']",FLUIDSYNTH_API int
+76,76,fluid_synth_get_gen,"['fluid_synth_t *synth', 'int chan', 'int param']",FLUIDSYNTH_API float
+77,77,fluid_synth_activate_key_tuning,"['fluid_synth_t *synth', 'int bank', 'int prog', 'const char *name', 'const double *pitch', 'int apply']",FLUIDSYNTH_API int
+78,78,fluid_synth_activate_octave_tuning,"['fluid_synth_t *synth', 'int bank', 'int prog', 'const char *name', 'const double *pitch', 'int apply']",FLUIDSYNTH_API int
+79,79,fluid_synth_tune_notes,"['fluid_synth_t *synth', 'int bank', 'int prog', 'int len', 'const int *keys', 'const double *pitch', 'int apply']",FLUIDSYNTH_API int
+80,80,fluid_synth_activate_tuning,"['fluid_synth_t *synth', 'int chan', 'int bank', 'int prog', 'int apply']",FLUIDSYNTH_API int
+81,81,fluid_synth_deactivate_tuning,"['fluid_synth_t *synth', 'int chan', 'int apply']",FLUIDSYNTH_API int
+82,82,fluid_synth_tuning_iteration_start,['fluid_synth_t *synth'],FLUIDSYNTH_API void
+83,83,fluid_synth_tuning_iteration_next,"['fluid_synth_t *synth', 'int *bank', 'int *prog']",FLUIDSYNTH_API int
+84,84,fluid_synth_tuning_dump,"['fluid_synth_t *synth', 'int bank', 'int prog', 'char *name', 'int len', 'double *pitch']",FLUIDSYNTH_API int
+85,85,fluid_synth_get_cpu_load,['fluid_synth_t *synth'],FLUIDSYNTH_API double
+86,86,fluid_synth_error,['fluid_synth_t *synth'],FLUID_DEPRECATED FLUIDSYNTH_API const char *
+87,87,fluid_synth_add_default_mod,"['fluid_synth_t *synth', 'const fluid_mod_t *mod', 'int mode']",FLUIDSYNTH_API int
+88,88,fluid_synth_remove_default_mod,"['fluid_synth_t *synth', 'const fluid_mod_t *mod']",FLUIDSYNTH_API int
+89,89,,"['fluid_synth_t *synth', 'int len', 'void *lout', 'int loff', 'int lincr', 'void *rout', 'int roff', 'int rincr']",FLUIDSYNTH_API int
+90,90,fluid_synth_write_float,"['fluid_synth_t *synth', 'int len', 'void *lout', 'int loff', 'int lincr', 'void *rout', 'int roff', 'int rincr']",FLUIDSYNTH_API int
+91,91,fluid_synth_nwrite_float,"['fluid_synth_t *synth', 'int len', 'float **left', 'float **right', 'float **fx_left', 'float **fx_right']",FLUID_DEPRECATED FLUIDSYNTH_API int
+92,92,fluid_synth_process,"['fluid_synth_t *synth', 'int len', 'int nfx', 'float *fx[]', 'int nout', 'float *out[]']",FLUIDSYNTH_API int
+93,93,fluid_synth_add_sfloader,"['fluid_synth_t *synth', 'fluid_sfloader_t *loader']",FLUIDSYNTH_API void
+94,94,fluid_synth_alloc_voice,"['fluid_synth_t *synth', 'fluid_sample_t *sample', 'int channum', 'int key', 'int vel']",FLUIDSYNTH_API fluid_voice_t *
+95,95,fluid_synth_start_voice,"['fluid_synth_t *synth', 'fluid_voice_t *voice']",FLUIDSYNTH_API void
+96,96,fluid_synth_get_voicelist,"['fluid_synth_t *synth', 'fluid_voice_t *buf[]', 'int bufsize', 'int ID']",FLUIDSYNTH_API void
+97,97,fluid_synth_handle_midi_event,"['void *data', 'fluid_midi_event_t *event']",FLUIDSYNTH_API int
+98,98,fluid_synth_set_custom_filter,"['fluid_synth_t *', 'int type', 'int flags']",FLUIDSYNTH_API int
+99,99,fluid_synth_get_ladspa_fx,['fluid_synth_t *synth'],FLUIDSYNTH_API fluid_ladspa_fx_t *
+100,100,fluid_synth_reset_basic_channel,"['fluid_synth_t *synth', 'int chan']",FLUIDSYNTH_API int
+101,101,fluid_synth_get_basic_channel,"['fluid_synth_t *synth', 'int chan', 'int *basic_chan_out', 'int *mode_chan_out', 'int *basic_val_out']",FLUIDSYNTH_API int
+102,102,fluid_synth_set_basic_channel,"['fluid_synth_t *synth', 'int chan', 'int mode', 'int val']",FLUIDSYNTH_API int
+103,103,fluid_synth_set_legato_mode,"['fluid_synth_t *synth', 'int chan', 'int legatomode']",FLUIDSYNTH_API int
+104,104,fluid_synth_get_legato_mode,"['fluid_synth_t *synth', 'int chan', 'int *legatomode']",FLUIDSYNTH_API int
+105,105,fluid_synth_set_portamento_mode,"['fluid_synth_t *synth', 'int chan', 'int portamentomode']",FLUIDSYNTH_API int
+106,106,fluid_synth_get_portamento_mode,"['fluid_synth_t *synth', 'int chan', 'int *portamentomode']",FLUIDSYNTH_API int
+107,107,fluid_synth_set_breath_mode,"['fluid_synth_t *synth', 'int chan', 'int breathmode']",FLUIDSYNTH_API int
+108,108,fluid_synth_get_breath_mode,"['fluid_synth_t *synth', 'int chan', 'int *breathmode']",FLUIDSYNTH_API int
